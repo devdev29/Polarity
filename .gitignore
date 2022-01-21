@@ -1,2 +1,2 @@
-./model/__pycache__/
-./client/node_modules/
+__pycache__/
+node_modules/

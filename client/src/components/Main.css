@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap");
+
+.navtab {
+  display: flex;
+  justify-content: flex-start;
+  position: sticky;
+  margin: 0em;
+}
+
+.navtab a {
+  font-family: "Lato", sans-serif;
+  margin: 2em;
+  text-decoration: none;
+  color: rgb(29 161 242);
+}
+
+#logo {
+  font-family: "Lato", sans-serif;
+  margin: 1em;
+  color: rgb(29 161 242);
+}
+
+#resultContainer {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#percentText {
+  display: block;
+  font: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 8rem;
+  text-align: center;
+  margin: auto;
+}
+
+.dots {
+  display: inline-block;
+  background-color: rgb(29 161 242);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  margin: 1rem;
+  animation: scaling 2.4s ease-in-out infinite;
+}
+
+#input-box {
+  padding: 2rem;
+  text-align: center;
+}
+
+.banner {
+  background-color: black;
+}
+
+#homepage {
+  margin: 0;
+  height: 100vh;
+  text-align: center;
+  background-color: gray;
+}
+
+#homepage h1 {
+  margin: 0%;
+  padding: 7em;
+}
+
+.twitter-page {
+  margin: 0;
+  height: 100vh;
+  background-color: gray;
+}
+
+.about-page {
+  height: 100vh;
+  background-color: gray;
+}
+
+.members {
+  list-style-type: none;
+  margin: 2rem;
+  font-size: 4vh;
+  font-weight: 600;
+  color: black;
+}
+
+#about-title {
+  margin: 0;
+  padding: 0.25em;
+  font-size: 6vh;
+  font-weight: 500;
+  color: black;
+}
+
+@keyframes scaling {
+  0%,
+  100% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+#positive {
+  text-align: center;
+  font-size: 8vh;
+  font-weight: 600;
+}
+
+.dots:nth-child(0) {
+  animation-delay: 0s;
+}
+.dots:nth-child(1) {
+  animation-delay: 0.6s;
+}
+.dots:nth-child(2) {
+  animation-delay: 1.2s;
+}
