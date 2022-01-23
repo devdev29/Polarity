@@ -3,38 +3,44 @@ import './Main.css'
 
 function Twitter() {
     const [query,setQuery]=useState('')
-    const [percent,setPercent]=useState()
-    const [load, setLoad]=useState(true)
+    const [percent,setPercent]=useState(0.0)
+    const [load, setLoad]=useState('none') // 0 for neither loading nor result, 1 result, -1 for loading
     
     const illegal_chars= /[./'";:,!@#$%^&*()\\]/
     const numbers= /[0-9]/
     
     function getResult()
     {
-        setLoad(true)
-        fetch(`http://127.0.0.1:5000/twitter/search?query=${query}`).then((response)=>response.json()).then((result)=>setPercent(parseFloat(result['positive']))).catch((e)=>console.log(e))
-        setLoad(false)
+        setLoad('load')
+        fetch(`http://127.0.0.1:5000/twitter/search?query=${query}`).then((response)=>response.json()).then((result)=>{setPercent(parseFloat(result['positive'])); setLoad('result');}).catch((e)=>console.log(e))
     }
 
     function dots() {
         return(
-            <>
+            <div id='load'>
             <div className="dots"></div>
             <div className="dots"></div>
             <div className="dots"></div>
-            </>
+            </div>
+        )
+    }
+
+    function get_percent(){
+        return(
+            <div id='resultContainer'>
+            <span id='percentText'>{(percent*100).toFixed(1)}%</span>
+            <span id='positive'>Positivity</span>
+            </div>
         )
     }
 
     return (
         <div className='twitter-page'>
-        <div id="input-box">
-            <input type="text" onKeyDown={(e)=>{if(e.key==='Enter'&&!(illegal_chars.test(query))&&query.search(numbers)!==0&&query!==''){getResult()}}} value={query} onChange={(e)=>{setQuery(e.target.value)}} placeholder='Search a hashtag'/>
+        <div id='inputContainer'>
+            <input type="text" id='input-box' onKeyDown={(e)=>{if(e.key==='Enter'){getResult();}}} value={query} onChange={(e)=>{setQuery(e.target.value)}} placeholder='Search a hashtag'/>
         </div>
-
-        <div id='resultContainer'>
-                <span id='percentText'>{load?dots():(percent*100).toFixed(1)}%</span>
-                <span id='positive'>Positivity</span>
+        <div>
+            {load==='none'?<div/>:(load==='result'?get_percent():dots())}
         </div>
         </div>
     )
