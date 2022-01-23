@@ -146,8 +146,8 @@
   animation-delay: 0s;
 }
 .dots:nth-child(1) {
-  animation-delay: 0.25s;
+  animation-delay: 0.2s;
 }
 .dots:nth-child(2) {
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
