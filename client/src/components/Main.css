@@ -52,12 +52,13 @@
 }
 
 #input-box {
-  font-size: 4vh;
+  font-size: 6vh;
   margin: 1em;
   background-color: rgb(211, 211, 211);
   outline: none;
   border: none;
   text-align: center;
+  border-radius: 10px;
 }
 
 .banner {
