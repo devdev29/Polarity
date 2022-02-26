@@ -34,6 +34,7 @@
   font-size: 8rem;
   text-align: center;
   margin: auto;
+  animation: fade 1s ease 0s 1;
 }
 
 .dots {

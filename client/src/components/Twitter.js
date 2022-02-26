@@ -6,9 +6,6 @@ function Twitter() {
     const [percent,setPercent]=useState(0.0)
     const [load, setLoad]=useState('none') // 0 for neither loading nor result, 1 result, -1 for loading
     
-    const illegal_chars= /[./'";:,!@#$%^&*()\\]/
-    const numbers= /[0-9]/
-    
     function getResult()
     {
         setLoad('load')
