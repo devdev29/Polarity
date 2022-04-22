@@ -1,7 +1,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Polarity
+# Polarity
 
 A website that displays the percent positivity the top tweets that contain any hashtag that's been searched 
 
