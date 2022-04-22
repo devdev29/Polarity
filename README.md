@@ -21,8 +21,8 @@ Frontend-
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
 # **How it Works**  
-### Tweets- The tweets are gotten in real time using the library [snscrape](https://github.com/JustAnotherArchivist/snscrape) and filtering the tweets by the hashtag entered by the user.  
-### Model- The model has been built using the Logistic Regression algorithm and trained on the [Sentiment140](https://www.kaggle.com/datasets/kazanova/sentiment140) dataset, currently it has reached an accuracy of **78%** 
+Tweets- The tweets are gotten in real time using the library [snscrape](https://github.com/JustAnotherArchivist/snscrape) and filtering the tweets by the hashtag entered by the user.  
+Model- The model has been built using the Logistic Regression algorithm and trained on the [Sentiment140](https://www.kaggle.com/datasets/kazanova/sentiment140) dataset, currently it has reached an accuracy of **78%** 
 
 ## To set up a dev environment for this repo-
 Fork this repo and navigate to the client directory, in the client directory, you can run:
